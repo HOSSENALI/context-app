@@ -1,0 +1,11 @@
+import React, { useContext } from 'react'
+import { UserContext } from '../context/context';
+const UserForm = () => {
+    const {user,setUser}=useContext(UserContext);
+    const handleChange=(e)=>{
+        setUser(e.target.value);
+    }
+    return ( <input type="text" onChange={handleChange} value={user}/> );
+}
+ 
+export default UserForm;
